@@ -1,14 +1,12 @@
 package me.ricky.readcsv.entity.repository;
-import org.springframework.stereotype.Repository;
-import java.util.List;
-import java.util.Optional;
 
-    
+import me.ricky.readcsv.entity.MarketQuote;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
 
 @Repository
 public interface MarketQuoteRepository extends JpaRepository<MarketQuote, Long> {
-    
-    Optional<MarketQuote> findByIdAndCustomerId(Long id, Long customerId);
 
-    List<MarketQuote> findByIdInAndCustomerId(List<Long> ids, Long customerId);
+
 }
